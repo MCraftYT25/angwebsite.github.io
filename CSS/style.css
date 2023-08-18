@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../files/fonts/Ubuntu-Regular.ttf');
+}
+header {
+    font-family: 'Ubuntu';
+    padding: 1em;
+    text-align: center;
+    background-color: rgb(253,217,141);
+    font-weight: bold;
+}
+body {
+    font-family: 'Ubuntu';
+}
+/*--------------------------------------*/
+nav {
+    padding: 0.5em;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    text-decoration: none;
+    display: block;
+    color: #f2a86f;
+    padding: 0.5em;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+a:hover {
+    color: black;
+    transition: color 0.2s;
+}
+/*--------------------------------------*/
+.page-container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.page-content {
+    padding: 0.5em;
+}
+.line {
+    border-bottom: solid 1px lightgray;
+}
+/*--------------------------------------*/
+.entry-container {
+    padding: 0.5em;
+    max-width: 700px;
+}
+.element {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+}
+.time-name {
+    width: 35%;
+}
+.time-example {
+    width: 70%;
+    padding-left: 0.5em;
+}
+.time-title {
+    text-align: left;
+}
+mark {
+    background-color: white;
+    font-weight: bold;
+}
+mark.green {
+    color: green;
+}
+mark.red {
+    color: red;
+}
+mark.blue {
+    color: blue;
+}
+mark.black {
+    color: black;
+}
+mark.yellow {
+    color: yellow;
+}
+.translate {
+    color: gray;
+}
+.build {
+    padding: 0.5em;
+    padding-left: 1.5em;
+    font-weight: bold;
+}
+h2 {
+    margin-top: 0.5em;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+h3 {
+    font-size: 1.5em;
+    padding: 0.2em;
+}
+ul {
+    list-style-type: none;
+}
+#tensesmenu {
+    position: fixed;
+    top: 12vh;
+    right: 0px;
+    left: auto;
+    width: 200px;
+    height: 40vh;
+}
+.time-name a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s;
+}
+.time-name a:hover {
+    color:#f2a86f;
+    transition: color 0.2s;
+}
+.words-list li {
+    margin-bottom: 0.4em;
+}
+/*
+@media screen and (min-width: 200px) {
+    #tensesmenu {
+        position: fixed;
+        top: 0vh;
+        left: 0;
+        height: 22vh;
+        width: 100%;
+    }
+    h2 {
+        margin-top: 0.5em;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        padding-top: 22vh;
+    }
+}*/
+/*@media screen and (min-width: 200px) {
+    .page-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #tensesmenu {
+        position: sticky;
+        top: 0vh;
+        height: 22vh;
+        width: 100%;
+        background-color: rgb(253,217,141);
+        color: black;
+    }
+    h2 {
+        margin-top: 0.5em;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        padding-top: 22vh;
+    }
+}
+@media screen and (min-width: 1050px) {
+    #tensesmenu {
+        position: fixed;
+        top: 12vh;
+        right: 0px;
+        left: auto;
+        width: 200px;
+        height: 40vh;
+    }
+    #tensesmenu ul {
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
+        margin-top: 0.5em;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        padding-top: 0vh;
+    }
+}*/
+
+@media screen and (min-width: 200px) {
+    #tensesmenu {
+        visibility: hidden;
+    }
+    #gomenu {
+        visibility: visible;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 0.5em;
+        background-color: rgb(253,217,141);
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+}
+@media screen and (min-width: 1050px) {
+    #tensesmenu {
+        visibility: visible;
+    }
+    #gomenu {
+        visibility: hidden;
+    }
+}
+
+/*--------------------------------------*/
+/*--------------------------------------*/
+/*--------------------------------------*/
+/*--------------------------------------*/
