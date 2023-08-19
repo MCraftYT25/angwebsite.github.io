@@ -10,13 +10,12 @@
     <header>
         <h1>UPDATE 11.07.2023 - 00.00.2023</h1>
     </header>
-    <nav>
+    <nav id="menu">
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="tenses.html">TENSES</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="wordformation.html">WORDS</a></li>
             <li><a href="">UPDATE</a></li>
-            <li><a href="">Newsletter</a></li>
             <li><a href=""></a></li>
         </ul>
     </nav>
@@ -28,20 +27,26 @@
                 <div class="line"></div>
                 <div class="element">
                     <div class="time-name">
-                        <p class="time-title">Version 1.4</p>
-                        <p class="translate">2023</p>
+                        <p class="time-title">Version 1.4<p class="daysago"></p>
+                        <p class="date">19.08.2023</p>
                     </div>
                     <div class="time-example">
-
+                        <p><mark class="green">+ github website 1.4</mark></p>
+                        <p><mark class="red">- github website 1.3</mark></p>
+                        <p><mark class="green">+ VSK1 Development Corporation</mark></p>
+                        <p><mark class="green">+ wordformation.html</mark></p>
+                        <p class="translate">(all page + content, new method (-50% code))</p>
+                        <p><mark class="blue">+ style.css</mark></p>
                     </div>
                 </div>
                 <div class="line"></div>
                 <div class="element">
                     <div class="time-name">
-                        <p class="time-title">Version 1.3</p>
-                        <p class="translate">18.08.2023</p>
+                        <p class="time-title">Version 1.3<p class="daysago"></p>
+                        <p class="date">18.08.2023</p>
                     </div>
                     <div class="time-example">
+                        <p><mark class="green">+ github website 1.3</mark></p>
                         <p><mark class="green">+ update.html</mark></p>
                         <p><mark class="blue">+ style.css</mark></p>
                         <p class="translate">(mobile version, menu)</p>
@@ -53,8 +58,8 @@
                 <div class="line"></div>
                 <div class="element">
                     <div class="time-name">
-                        <p class="time-title">Version 1.2</p>
-                        <p class="translate">03.08.2023</p>
+                        <p class="time-title">Version 1.2<p class="daysago"></p>
+                        <p class="date">03.08.2023</p>
                     </div>
                     <div class="time-example">
                         <p><mark class="blue">+ style.css</mark></p>
@@ -64,8 +69,8 @@
                 <div class="line"></div>
                 <div class="element">
                     <div class="time-name">
-                        <p class="time-title">Version 1.1</p>
-                        <p class="translate">13.07.2023</p>
+                        <p class="time-title">Version 1.1<p class="daysago"></p>
+                        <p class="date">13.07.2023</p>
                     </div>
                     <div class="time-example">
                         <p><mark class="green">+ tenses.html</mark></p>
@@ -75,7 +80,7 @@
                 <div class="element">
                     <div class="time-name">
                         <p class="time-title">Version 1.0</p>
-                        <p class="translate">11.07.2023</p>
+                        <p class="date">11.07.2023</p>
                     </div>
                     <div class="time-example">
                         <p><mark class="green">+ index.html</mark></p>
@@ -87,5 +92,12 @@
             </div>
         </div>
     </div>
+<script>
+    document.getElementsByTagName('h2')[0].innerHTML = "Latest Update - " + document.querySelector('.date').innerText;
+    document.getElementsByTagName('h1')[0].innerHTML = "UPDATE 11.07.2023 - " + document.querySelector('.date').innerText;
+</script>
+<div id="mobile-widgets">
+    <a id="gomenu" href="#menu">Menu</a>
+</div>
 </body>
 </html>

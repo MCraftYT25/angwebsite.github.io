@@ -12,6 +12,9 @@ header {
     text-align: center;
     background-color: rgb(253,217,141);
     font-weight: bold;
+    /*width: 80%;
+    margin-left: auto;
+    margin-right: auto;*/
 }
 body {
     font-family: 'Ubuntu';
@@ -34,6 +37,10 @@ nav a {
 a:hover {
     color: black;
     transition: color 0.2s;
+}
+nav#menu {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 /*--------------------------------------*/
 .page-container {
@@ -125,6 +132,53 @@ ul {
 .words-list li {
     margin-bottom: 0.4em;
 }
+footer {
+    /*position: sticky;
+    bottom: 0;
+    
+    
+    left: 10%;
+    right: 10%;*/
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(253,217,141);
+    padding: 0.5em;
+}
+.date {
+    color: gray;
+}
+.word-formation ul li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.5em;
+}
+.word-formation ul li .prefix {
+    width: 35%;
+    font-weight: bold;
+}
+.word-formation ul li .example {
+    width: 60%;
+    margin-left: 5%;
+    font-weight: bold;
+}
+.word-formation ul li .prefix-container {
+    width: 35%;
+}
+.word-formation ul li .prefix-container .desc {
+    color: gray;
+}
+#widgets {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+}
+#instagram, #facebook, #search, #account {
+    width: 3vw;
+    height: 3vh;
+}
 /*
 @media screen and (min-width: 200px) {
     #tensesmenu {
@@ -186,11 +240,18 @@ ul {
     #tensesmenu {
         visibility: hidden;
     }
-    #gomenu {
+    #mobile-widgets {
         visibility: visible;
         position: fixed;
         bottom: 0;
         right: 0;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        border-top-left-radius: 1vw;
+        border-top-right-radius: 1vw;
+        background-color: rgb(253,217,141);
+    }
+    #mobile-widgets a {
         padding: 0.5em;
         background-color: rgb(253,217,141);
         text-decoration: none;
@@ -202,7 +263,7 @@ ul {
     #tensesmenu {
         visibility: visible;
     }
-    #gomenu {
+    #mobile-widgets {
         visibility: hidden;
     }
 }
