@@ -35,15 +35,15 @@ a:hover {
     color: black;
     transition: color 0.2s;
 }
-nav#menu {
+/*nav#menu {
     margin-left: 10%;
     margin-right: 10%;
-}
+}*/
 /*--------------------------------------*/
-.page-container {
+/*.page-container {
     padding-left: 10%;
     padding-right: 10%;
-}
+}*/
 .page-content {
     padding: 0.5em;
 }
@@ -207,6 +207,34 @@ footer {
     margin-right: 0.5em;
 }
 /*--------------------------------------*/
+.searchmusic {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.searchmusic .searchbox {
+    font-family: 'Ubuntu';
+    padding: 1em;
+    background-color: rgb(253,217,141);
+    border-radius: 2vh;
+    font-weight: bold;
+}
+.searchmusic .submit {
+    padding: 0.5em;
+    font-family: 'Ubuntu';
+    background-color: rgb(253,217,141);
+    border-radius: 2vh;
+    font-size: 1.2em;
+    margin-top: 1vh;
+    font-weight: bold;
+}
+/*--------------------------------------*/
+iframe {
+    border-radius: 2vh;
+    margin-top: 0.5em;
+}
+/*--------------------------------------*/
 
 @media screen and (min-width: 200px) {
     #tensesmenu {
@@ -230,6 +258,17 @@ footer {
         color: black;
         font-weight: bold;
     }
+    .page-container {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    nav#menu {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .element {
+        padding: 0.5em;
+    }
 }
 @media screen and (min-width: 1050px) {
     #tensesmenu {
@@ -237,6 +276,17 @@ footer {
     }
     #mobile-widgets {
         visibility: hidden;
+    }
+    .page-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    nav#menu {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .element {
+        padding: 0.5em;
     }
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Document</title>
+    <title>VSKY.COM - Music Practise</title>
 </head>
 <body>
     <header>
@@ -15,7 +15,9 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="tenses.html">TENSES</a></li>
             <li><a href="wordformation.html">WORDS</a></li>
-            <li><a href="">UPDATE</a></li>
+            <li><a href="update.html">UPDATE</a></li>
+            <li><a href="">MUSIC</a></li>
+            <li><a href="">FILES</a></li>
             <li><a href=""></a></li>
         </ul>
     </nav>
@@ -29,49 +31,37 @@
                     </svg>
                     <p>Music</p>
                 </h2>
+                <h3>Eneter your playlist</h3>
+                <form class="searchmusic" onsubmit="searchmusic(); return false;">
+                    <input id="searchbox" class="searchbox" type="text" placeholder="Eneter your playlist">
+                    <input class="submit" type="submit" value="Search">
+                </form>
+                <div id="searchresult"></div>
                 <h3>Vergesse nie die Street</h3>
-                <div class="line"></div>
-                <div class="element">
-                    <div class="time-example">
-                        <iframe height="100" src="https://www.youtube.com/embed/vrQFus3bwP4" title="Vergesse nie die Street" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="line"></div>
+                <iframe height="60%" src="https://www.youtube.com/embed/vrQFus3bwP4" title="Vergesse nie die Street" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h3>lil peep - benz truck (prod. smokeasac)</h3>
-                <div class="line"></div>
-                <div class="element">
-                    <div class="time-example">
-                        <iframe height="100" src="https://www.youtube.com/embed/3rkJ3L5Ce80" title="lil peep - benz truck (prod. smokeasac)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="line"></div>
+                <iframe width="100%" height="60%" src="https://www.youtube.com/embed/3rkJ3L5Ce80" title="lil peep - benz truck (prod. smokeasac)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h3>👑Deutsch Rap👑</h3>
-                <div class="line"></div>
-                <div class="element">
-                    <div class="time-example">
-                        <iframe height="100" src="https://www.youtube.com/embed/SoImFhORKpg?list=PLjZpirdJfetWQT_HrjF-J9Oh6ABtCiqqR" title="Bonez MC &amp; RAF Camora feat. Gzuz &amp; Maxwell - Kontrollieren (prod. by Beataura &amp; RAF Camora)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <h3>👑Deutsch Rap👑</h3>
-                <div class="line"></div>
-                <div class="element">
-                    <div class="time-example">
-                        <iframe width="1257" height="707" src="https://www.youtube.com/embed/SoImFhORKpg?list=PLjZpirdJfetWQT_HrjF-J9Oh6ABtCiqqR" title="Bonez MC &amp; RAF Camora feat. Gzuz &amp; Maxwell - Kontrollieren (prod. by Beataura &amp; RAF Camora)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2IXjLCG6L2xi1RFCWiKSrl?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
+                <iframe height="100" src="https://www.youtube.com/embed/SoImFhORKpg?list=PLjZpirdJfetWQT_HrjF-J9Oh6ABtCiqqR" title="Bonez MC &amp; RAF Camora feat. Gzuz &amp; Maxwell - Kontrollieren (prod. by Beataura &amp; RAF Camora)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>  
             </div>
         </div>
     </div>
-<script>
-    document.getElementsByTagName('h2')[0].innerHTML = "Latest Update - " + document.querySelector('.date').innerText;
-    document.getElementsByTagName('h1')[0].innerHTML = "UPDATE 11.07.2023 - " + document.querySelector('.date').innerText;
-</script>
 <div id="mobile-widgets">
     <a id="gomenu" href="#menu">Menu</a>
 </div>
+<footer>VSK1 GmbH 2023 <mark class="grey" id="version">V1.5</mark></footer>
+<script>
+    document.getElementsByTagName('h2')[0].innerHTML = "Latest Update - " + document.querySelector('.date').innerText;
+    document.getElementsByTagName('h1')[0].innerHTML = "UPDATE 11.07.2023 - " + document.querySelector('.date').innerText;
+
+    function searchmusic()
+    {
+        let link = document.getElementById('searchbox').value;
+        link = link.replace("https://youtu.be/", "/")
+        document.getElementById('searchresult').innerHTML = '<h3>Your Playlist</h3><iframe height="60%" src="https://www.youtube.com/embed' + link + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    }
+</script>
+<script src="JS/scripts.js"></script>
 </body>
 </html>
