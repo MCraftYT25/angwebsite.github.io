@@ -9,6 +9,10 @@
 <body>
     <header>
         <h1>Music Practise</h1>
+        <label class="switch">
+            <input onclick="chgcolor();" type="checkbox">
+            <span class="slider round"></span>
+        </label>
     </header>
     <nav id="menu">
         <ul>
@@ -31,18 +35,33 @@
                     </svg>
                     <p>Music</p>
                 </h2>
-                <h3>Eneter your playlist</h3>
+                <!--<h3>Eneter your playlist</h3>
                 <form class="searchmusic" onsubmit="searchmusic(); return false;">
                     <input id="searchbox" class="searchbox" type="text" placeholder="Eneter your playlist">
                     <input class="submit" type="submit" value="Search">
+                </form>-->
+                <h3>Enter your playlist & first video (Mobile)</h3>
+                <form class="searchmusic" onsubmit="searchmusic(); return false;">
+                    <input id="playlist" class="searchbox" type="text" placeholder="Enter your playlist">
+                    <input id="video" class="searchbox" type="text" placeholder="Enter First Video on your playlist">
+                    <input class="submit" type="submit" value="Search">
                 </form>
-                <div id="searchresult"></div>
-                <h3>Vergesse nie die Street</h3>
-                <iframe height="60%" src="https://www.youtube.com/embed/vrQFus3bwP4" title="Vergesse nie die Street" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Enter your video (PC)</h3>
+                <form class="searchmusic" onsubmit="searchmusicpc(); return false;">
+                    <input id="searchbox" class="searchbox" type="text" placeholder="Enter your video">
+                    <input class="submit" type="submit" value="Search">
+                </form>
+                <div id="searchresult">
+                    <p class="convertdesc"><mark class="black">(MOBILE)</mark> Wprowadź link do swojej playlisty, następnie link do pierwszego lub kolejnego filmu z tej playlisty. <mark class="red">Wymagane są dwa linki. Playlista nie może być prywatna.</mark></p>
+                    <p class="convertdesc"><mark class="black">(PC)</mark> Wprowadź link do swojego filmu lub filmu z playlisty. <mark class="red">Link do playlisty nie jest obsługiwany. Playlista nie może być prywatna.</mark></p>
+                </div>
+                <!--<h3>Vergesse nie die Street</h3>
+                <iframe width="100%" height="60%" src="https://www.youtube.com/embed/vrQFus3bwP4" title="Vergesse nie die Street" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h3>lil peep - benz truck (prod. smokeasac)</h3>
                 <iframe width="100%" height="60%" src="https://www.youtube.com/embed/3rkJ3L5Ce80" title="lil peep - benz truck (prod. smokeasac)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                -->
                 <h3>👑Deutsch Rap👑</h3>
-                <iframe height="100" src="https://www.youtube.com/embed/SoImFhORKpg?list=PLjZpirdJfetWQT_HrjF-J9Oh6ABtCiqqR" title="Bonez MC &amp; RAF Camora feat. Gzuz &amp; Maxwell - Kontrollieren (prod. by Beataura &amp; RAF Camora)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="60%" src="https://www.youtube.com/embed/SoImFhORKpg?list=PLjZpirdJfetWQT_HrjF-J9Oh6ABtCiqqR" title="Bonez MC &amp; RAF Camora feat. Gzuz &amp; Maxwell - Kontrollieren (prod. by Beataura &amp; RAF Camora)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>  
             </div>
         </div>
@@ -57,9 +76,18 @@
 
     function searchmusic()
     {
+        let playlist = document.getElementById('playlist').value;
+        playlist = playlist.replace("https://youtube.com/playlist?", "?");
+        let video = document.getElementById('video').value;
+        video = video.replace("https://youtu.be/", "/");
+        link = video + playlist;
+        document.getElementById('searchresult').innerHTML = '<h3>Your Playlist</h3><iframe width="100%" height="60%" src="https://www.youtube.com/embed' + link + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    }
+    function searchmusicpc()
+    {
         let link = document.getElementById('searchbox').value;
-        link = link.replace("https://youtu.be/", "/")
-        document.getElementById('searchresult').innerHTML = '<h3>Your Playlist</h3><iframe height="60%" src="https://www.youtube.com/embed' + link + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        link = link.replace("https://youtu.be/", "/");
+        document.getElementById('searchresult').innerHTML = '<h3>Your Playlist</h3><iframe width="100%" height="60%" src="https://www.youtube.com/embed' + link + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
     }
 </script>
 <script src="JS/scripts.js"></script>

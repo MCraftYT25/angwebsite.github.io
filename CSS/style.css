@@ -1,3 +1,11 @@
+:root {
+    --main-color: rgb(253,217,141);
+    --second-color: black;
+    --third-color: #333;
+    /*--main-color: #333;
+    --second-color: rgb(253,217,141);
+    --third-color: grey;*/
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +18,14 @@ header {
     font-family: 'Ubuntu';
     padding: 1em;
     text-align: center;
-    background-color: rgb(253,217,141);
+    background-color: var(--main-color);
+    color: var(--second-color);
     font-weight: bold;
 }
 body {
     font-family: 'Ubuntu';
+    /*background-color: var(--third-color);
+    color: var(--second-color);*/
 }
 /*--------------------------------------*/
 nav {
@@ -55,6 +66,7 @@ a:hover {
     padding: 0.5em;
     max-width: 700px;
 }
+
 .element {
     padding: 0.5em;
     display: flex;
@@ -63,15 +75,24 @@ a:hover {
 .time-name {
     width: 35%;
 }
+.update-example {
+    width: 65%;
+    padding-left: 0.5em;
+}
 .time-example {
-    width: 70%;
+    /*max-width: 70%;*/
     padding-left: 0.5em;
 }
 .time-title {
     text-align: left;
 }
+.build {
+    padding: 0.5em;
+    padding-left: 1.5em;
+    font-weight: bold;
+}
 mark {
-    background-color: white;
+    background-color: transparent;
     font-weight: bold;
 }
 mark.green {
@@ -96,11 +117,7 @@ mark.grey {
 .translate {
     color: gray;
 }
-.build {
-    padding: 0.5em;
-    padding-left: 1.5em;
-    font-weight: bold;
-}
+
 /*--------------------------------------*/
 h2 {
     margin-top: 0.5em;
@@ -109,7 +126,6 @@ h2 {
 }
 h3 {
     font-size: 1.5em;
-    padding: 0.2em;
 }
 ul {
     list-style-type: none;
@@ -148,7 +164,8 @@ h2 p {
 footer {
     text-align: center;
     font-weight: bold;
-    background-color: rgb(253,217,141);
+    background-color: var(--main-color);
+    color: var(--second-color);
     padding: 0.5em;
 }
 /*--------------------------------------*/
@@ -216,18 +233,26 @@ footer {
 .searchmusic .searchbox {
     font-family: 'Ubuntu';
     padding: 1em;
-    background-color: rgb(253,217,141);
+    background-color: var(--main-color);
+    color: var(--second-color);
     border-radius: 2vh;
     font-weight: bold;
 }
 .searchmusic .submit {
     padding: 0.5em;
     font-family: 'Ubuntu';
-    background-color: rgb(253,217,141);
+    background-color: var(--main-color);
+    color: var(--second-color);
     border-radius: 2vh;
     font-size: 1.2em;
     margin-top: 1vh;
     font-weight: bold;
+}
+#playlist {
+    margin-bottom: 0.5em;
+}
+.convertdesc {
+    margin-bottom: 0.5em;
 }
 /*--------------------------------------*/
 iframe {
@@ -235,7 +260,41 @@ iframe {
     margin-top: 0.5em;
 }
 /*--------------------------------------*/
-
+.time-element-container h2 {
+    margin: 1vh 0 0 0;
+    padding: 1vh 0 1vh 0;
+    border-bottom: 1px solid lightgrey;
+}
+.time-element-container h3 {
+    padding: 1vh 0 1vh 0;
+    border-bottom: 1px solid lightgrey;
+}
+.time-element-container .desc {
+    padding: 1vh 0 1vh 0;
+    border-bottom: 1px solid lightgrey;
+}
+.time-element-container .build {
+    padding: 1vh 0 1vh 0;
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+}
+.time-element-container .element {
+    display: flex;
+    flex-direction: row;
+    padding: 1vh 0 1vh 0;
+    border-bottom: 1px solid lightgrey;
+}
+.time-element-container .time-title {
+    width: 30%;
+}
+.time-element-container li {
+    padding: 1vh 0 1vh 0;
+    border-bottom: 1px solid lightgrey;
+}
+.time-element-container .time-example{
+    padding: 1vh 0 0 1vw;
+}
+/*--------------------------------------*/
 @media screen and (min-width: 200px) {
     #tensesmenu {
         visibility: hidden;
@@ -249,13 +308,14 @@ iframe {
         padding-top: 0.5em;
         border-top-left-radius: 1vw;
         border-top-right-radius: 1vw;
-        background-color: rgb(253,217,141);
+        background-color: var(--main-color);
+        color: var(--second-color);
     }
     #mobile-widgets a {
         padding: 0.5em;
-        background-color: rgb(253,217,141);
+        background-color: var(--main-color);
         text-decoration: none;
-        color: black;
+        color: var(--second-color);
         font-weight: bold;
     }
     .page-container {
@@ -291,7 +351,100 @@ iframe {
 }
 
 /*--------------------------------------*/
+.switch {
+    position: absolute;
+    right: 1vw;
+    top: 2vh;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--main-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: rgb(253,217,141);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--main-color);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
 /*--------------------------------------*/
+#alertbox-container {
+    position:fixed;
+    top: 0px;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#alertbox-container #alertbox {
+    margin: auto;
+    width: 40%;
+    height: 10vh;
+    margin-top: 10vh;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border-radius: 2vh;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+#alertbox-container #alertbox div {
+    margin: auto;
+    width: 40%;
+}
+#alertbox-container #alertbox div input {
+    font-family: 'Ubuntu';
+    background-color: var(--main-color);
+    color: var(--second-color);
+    padding: 0.5vh;
+    font-size: 2vh;
+    border-radius: 1vh;
+    font-weight: bold;
+    transition: .3s;
+}
+#alertbox-container #alertbox div input:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: .3s;
+}
 /*--------------------------------------*/
 /*--------------------------------------*/
 /*--------------------------------------*/

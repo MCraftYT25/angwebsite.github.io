@@ -9,6 +9,10 @@
 <body>
     <header>
         <h1>VSKY.COM</h1>
+        <label class="switch">
+            <input onclick="chgcolor();" type="checkbox">
+            <span class="slider round"></span>
+        </label>
 <!--
         <div id="widgets">
             <div id="instagram">
@@ -39,7 +43,7 @@
     <nav id="menu">
         <ul>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="tenses.html">TENSES</a></li>
+            <li><a href="tenseslite.html">TENSES</a></li>
             <li><a href="wordformation.html">WORDS</a></li>
             <li><a href="update.html">UPDATE</a></li>
             <li><a href="music.html">MUSIC</a></li>
@@ -88,7 +92,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#PresentPerfect">Present Perfect</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">have written</mark> a book</p>
                         <p class="translate">Napisałem książkę.</p>
                     </div>
@@ -98,7 +102,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#PresentPerfectContinuous">Present Perfect Continuous</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">have been writing</mark> a book for 2 hours.</p>
                         <p class="translate">Piszę książkę od 2 godzin.</p>
                     </div>
@@ -108,7 +112,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#PastSimple">Past Simple </a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p >I <mark class="green">wrote</mark> a book yesterday.</p>
                         <p class="translate">Napisałem wczoraj książkę.</p>
                     </div>
@@ -118,7 +122,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#PastContinuous">Past Continuous</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">was writing </mark> a book all day long.</p>
                         <p class="translate">Cały dzień pisałem książkę.</p>
                     </div>
@@ -128,7 +132,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#PastPerfect">Past Perfect</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">had written </mark> a book before you came.</p>
                         <p class="translate">Napisałem książkę, zanim przyszedłeś.</p>
                     </div>
@@ -138,7 +142,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#PastPerfectContinuous">Past Perfect Continuous</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">had been writing </mark> a book before you came.</p>
                         <p class="translate">Pisałem książke zanim przyszedłeś.</p>
                     </div>
@@ -148,7 +152,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#FutureSimple">Future Simple</a> </p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">will write </mark> a book.</p>
                         <p class="translate">Napiszę książkę.</p>
                     </div>
@@ -158,7 +162,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#FutureContinuous">Future Continuous</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">will be writing</mark> a book tomorrow at 7.</p>
                         <p class="translate">Będę pisać książkę jutro o 7.</p>
                     </div>
@@ -168,7 +172,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#FuturePerfect">Future Perfect</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">will have written </mark> a book by the end of the week.</p>
                         <p class="translate">Będę miał napisaną książkę do końca tygodnia</p>
                     </div>
@@ -178,7 +182,7 @@
                     <div class="time-name">
                         <p class="time-title"><a href="tenses.html#FuturePerfectContinuous">Future Perfect Continuous</a></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p>I <mark class="green">will have been writing </mark> a book for three years next month.</p>
                         <p class="translate">W przyszłym miesiącu minie trzy lata odkąd piszę książkę.</p>
                     </div>
@@ -188,139 +192,12 @@
                     <div class="time-name">
                         <p class="time-title"></p>
                     </div>
-                    <div class="time-example">
+                    <div class="update-example">
                         <p><mark class="green"></mark> </p>
                         <p class="translate"></p>
                     </div>
                 </div>
-            </div>
-            <!--
-            <div class="element-container">
-                <h2>Present Continuous</h2>
-                <div class="line"></div>
-                <div class="element">
-                    <p>Czas ten najczęściej opisuje czynność, która jest w tej chwili wykonywana.</p>
-                </div>
-                <div class="line"></div> 
-                <div class="build">
-                    <p>podmiot + to be <mark class="green">(am/is/are)</mark> + czasownik z <mark class="green">-ing</mark></p>
-                </div>  
-                <div class="line"></div>
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Positive</p>
-                    </div>
-                    <div class="time-example">
-                        <p>I <mark class="green">am writing</mark> a book now.</p>
-                        <p class="translate"></p>
-                    </div>
-                </div> 
-                <div class="line"></div>     
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Negative</p>
-                    </div>
-                    <div class="time-example">
-                        <p>I <mark class="red">am not writing</mark> a book now.</p>
-                        <p class="translate"></p>
-                    </div>
-                </div>   
-                <div class="line"></div>   
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Questions</p>
-                    </div>
-                    <div class="time-example">
-                        <p><mark class="blue">Am I writing</mark> a book?</p>
-                        <p class="translate"></p>
-                    </div>
-                </div>
-                <div class="line"></div>           
-            </div>
-
-
-
-
-            <div class="element-container">
-                <h2>Present Simple</h2>
-                <div class="line"></div>
-                <div class="element">
-                    <p>Jest najczęściej używanym czasem teraźniejszym w języku angielskim.</p>
-                </div>
-                <div class="line"></div> 
-                <div class="build">
-                    <p>podmiot + czasownik w formie podstawowej</p>
-                </div>  
-                <div class="line"></div>
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Positive</p>
-                    </div>
-                    <div class="time-example">
-                        <p>I <mark class="green">write</mark> a book.</p>
-                        <p class="translate"></p>
-                    </div>
-                </div> 
-                <div class="line"></div>     
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Negative</p>
-                    </div>
-                    <div class="time-example">
-                        <p>I <mark class="red">am not write</mark> a book.</p>
-                        <p class="translate"></p>
-                    </div>
-                </div>   
-                <div class="line"></div>   
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Questions</p>
-                    </div>
-                    <div class="time-example">
-                        <p><mark class="blue">Do I write</mark> a book?</p>
-                        <p class="translate"></p>
-                    </div>
-                </div>
-                <div class="line"></div>  
-                <div class="element">
-                    <p>W trzeciej osobie liczby pojedynczej do czasownika musimy dodać końcówkę</p>
-                </div>
-                <div class="line"></div>  
-                <div class="build">
-                    <p>he/she/it + czasownik z końcówką<mark class="green"> -s</mark></p>
-                </div>
-                <div class="line"></div>
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Positive</p>
-                    </div>
-                    <div class="time-example">
-                        <p>He <mark class="green">writes</mark> a book.</p>
-                        <p class="translate"></p>
-                    </div>
-                </div> 
-                <div class="line"></div>     
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Negative</p>
-                    </div>
-                    <div class="time-example">
-                        <p>He <mark class="red">is not write</mark> a book.</p>
-                        <p class="translate"></p>
-                    </div>
-                </div>   
-                <div class="line"></div>   
-                <div class="element">
-                    <div class="time-name">
-                        <p class="time-title">Questions</p>
-                    </div>
-                    <div class="time-example">
-                        <p><mark class="blue">Does he write</mark> a book?</p>
-                        <p class="translate"></p>
-                    </div>
-                </div>
-                <div class="line"></div>   
-                -->        
+            </div>   
             </div>
         </div>
     </div>
@@ -328,6 +205,19 @@
         <a id="gomenu" href="#menu">Menu</a>
     </div>
     <footer>VSK1 GmbH 2023 <mark class="grey" id="version">V1.5</mark></footer>
+<!--   <div id="alertbox-container">
+        <div id="alertbox">
+            <div>
+                <h1>VSKY.COM</h1>
+                <form>
+                    <input type="button" value="ACCEPT">
+                    <input type="button" value="DENY">
+                </form>
+            </div>
+        </div>
+        --> 
+    </div>
+    
 <script src="JS/scripts.js"></script>
 </body>
 </html>
