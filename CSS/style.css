@@ -2,6 +2,8 @@
     --main-color: rgb(253,217,141);
     --second-color: black;
     --third-color: #333;
+    --fourth-color: #f2a86f;
+    --fifth-color: white;
     /*--main-color: #333;
     --second-color: rgb(253,217,141);
     --third-color: grey;*/
@@ -444,6 +446,29 @@ input:checked + .slider:before {
     background-color: var(--second-color);
     color: var(--main-color);
     transition: .3s;
+}
+#stats {
+    width: 100%;
+    background-color: var(--main-color);
+    border-radius: 1vh;
+    margin-top: 4vh;
+}
+#stats .stats {
+    font-size: 2vh;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    padding: 1vh;
+}
+#stats .stats p {
+    padding: 0.5vh;
+    width: 45%;
+    color: var(--second-color);
+}
+#stats .stats .value {
+    width: 55%;
+    background-color: white;
+    border-radius: 1vh;
 }
 /*--------------------------------------*/
 /*--------------------------------------*/
