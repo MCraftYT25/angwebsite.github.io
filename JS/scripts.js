@@ -1,4 +1,4 @@
-const version = 1.8; 
+const version = 1.9; 
 document.getElementById('version').innerText = "V" + version;
 
 let x = 0;
