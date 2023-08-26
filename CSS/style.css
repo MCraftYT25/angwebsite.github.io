@@ -4,9 +4,6 @@
     --third-color: #333;
     --fourth-color: #f2a86f;
     --fifth-color: white;
-    /*--main-color: #333;
-    --second-color: rgb(253,217,141);
-    --third-color: grey;*/
 }
 * {
     margin: 0;
@@ -26,9 +23,64 @@ header {
 }
 body {
     font-family: 'Ubuntu';
-    /*background-color: var(--third-color);
-    color: var(--second-color);*/
     /*background-image: url("../files/img/prewallpapper.png");*/
+}
+/*--------------------------------------*/
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.top1 {
+    margin-top: 1vh;
+}
+.bottom1 {
+    margin-bottom: 1vh;
+}
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+.orange {
+    color: orange;
+}
+.blue {
+    color: blue;
+}
+.black {
+    color: black;
+}
+.yellow {
+    color: yellow;
+}
+.grey {
+    color: grey;
+    background-color: transparent;
+}
+.violet {
+    color: violet;
+}
+.yellow {
+    color: yellow;
+}
+.darkgreen {
+    color: darkgreen;
+}
+.main {
+    color: var(--main-color);
 }
 /*--------------------------------------*/
 nav {
@@ -49,15 +101,7 @@ a:hover {
     color: black;
     transition: color 0.2s;
 }
-/*nav#menu {
-    margin-left: 10%;
-    margin-right: 10%;
-}*/
 /*--------------------------------------*/
-/*.page-container {
-    padding-left: 10%;
-    padding-right: 10%;
-}*/
 .page-content {
     padding: 0.5em;
 }
@@ -69,7 +113,6 @@ a:hover {
     padding: 0.5em;
     max-width: 700px;
 }
-
 .element {
     padding: 0.5em;
     display: flex;
@@ -96,25 +139,6 @@ a:hover {
 mark {
     background-color: transparent;
     font-weight: bold;
-}
-mark.green {
-    color: green;
-}
-mark.red {
-    color: red;
-}
-mark.blue {
-    color: blue;
-}
-mark.black {
-    color: black;
-}
-mark.yellow {
-    color: yellow;
-}
-mark.grey {
-    color: grey;
-    background-color: transparent;
 }
 .translate {
     color: gray;
@@ -451,7 +475,7 @@ input:checked + .slider:before {
     width: 100%;
     background-color: var(--main-color);
     border-radius: 1vh;
-    margin-top: 4vh;
+    margin-top: 1vh;
 }
 .stats-container .stats, .status {
     font-size: 2vh;
@@ -503,5 +527,18 @@ input:checked + .slider:before {
     width: 70%;
 }
 /*--------------------------------------*/
+.link {
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    padding: 1vh;
+    border-radius: 1vh;
+    font-weight: bold;
+    margin-right: 0.5vw;
+}
+.link:hover {
+    background-color: var(--third-color);
+    color: var(--main-color);
+}
 /*--------------------------------------*/
 /*--------------------------------------*/
