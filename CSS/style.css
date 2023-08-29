@@ -82,6 +82,10 @@ body {
 .main {
     color: var(--main-color);
 }
+.hidden {
+    visibility: hidden;
+    width: 0%;
+}
 /*--------------------------------------*/
 nav {
     padding: 0.5em;
@@ -117,6 +121,7 @@ a:hover {
     padding: 0.5em;
     display: flex;
     flex-direction: row;
+    max-width: 95%;
 }
 .time-name {
     width: 35%;
@@ -199,6 +204,9 @@ footer {
     color: gray;
 }
 /*-----------------WORDFORMATION.html---------------------*/
+.word-formation {
+    width: 98%;
+}
 .word-formation ul li {
     display: flex;
     flex-direction: row;
@@ -573,7 +581,7 @@ input:checked + .slider:before {
     color: var(--second-color);
     border: 0;
     border-radius: 1vh;
-    font-size: 1.5vh;
+    font-size: 1em;
     font-weight: bold;
 }
 /*--------------------------------------*/
