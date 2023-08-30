@@ -1,5 +1,5 @@
-const version = 2.2;
-const versiondate = "2023-08-27";
+const version = 2.3;
+const versiondate = "2023-08-30";
 const year = 2023; 
 
 document.getElementById('version').innerText = "V" + version;

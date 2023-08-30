@@ -121,7 +121,7 @@ a:hover {
     padding: 0.5em;
     display: flex;
     flex-direction: row;
-    max-width: 95%;
+    max-width: 94%;
 }
 .time-name {
     width: 35%;
@@ -583,5 +583,8 @@ input:checked + .slider:before {
     border-radius: 1vh;
     font-size: 1em;
     font-weight: bold;
+}
+#searchelement {
+    width: 94%;
 }
 /*--------------------------------------*/
