@@ -87,6 +87,12 @@ body {
     visibility: hidden;
     width: 0%;
 }
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
 /*--------------------------------------*/
 nav {
     padding: 0.5em;
@@ -123,6 +129,8 @@ a:hover {
     display: flex;
     flex-direction: row;
     max-width: 100%;
+    border: solid 1px black;
+    overflow: hidden;
 }
 .time-name {
     width: 35%;

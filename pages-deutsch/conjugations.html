@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style-deutsch.css">
+    <title>VSKY.COM - Konjugation</title>
+</head>
+<body>
+    <header>
+        <h1>Konjugation</h1>
+        <label class="switch">
+            <input onclick="chgcolor();" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </header>
+    <nav id="menu">
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+        </ul>
+    </nav>
+    <div class="page-container">
+        <div class="line"></div>
+        <div class="entry-container">
+            <h2 id="">Odmiana czasowników</h2>
+                <form id="searchword">
+                    <input id="searchelement" type="text" placeholder="Search...">
+                </form>
+            <div id="conjugations-element-container" class="conjugations-element-container">
+                <div class="verben-container">
+                    <h3><p class="black bold">haben <mark class="grey">(mieć)</mark></p></h3>
+                    <div>
+                        <p class="right bold black">ich</p>
+                        <p class="left bold green">habe</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">du</p>
+                        <p class="left bold green">hast</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">er/sie/es</p>
+                        <p class="left bold green">hat</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">wir</p>
+                        <p class="left bold green">haben</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">ihr</p>
+                        <p class="left bold green">habt</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">sie/Sie</p>
+                        <p class="left bold green">haben</p>
+                    </div>
+                </div>
+                <div class="verben-container">
+                    <h3><p class="black bold">sein <mark class="grey">(być)</mark></p></h3>
+                    <div>
+                        <p class="right bold black">ich</p>
+                        <p class="left bold green">bin</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">du</p>
+                        <p class="left bold green">bist</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">er/sie/es</p>
+                        <p class="left bold green">ist</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">wir</p>
+                        <p class="left bold green">sind</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">ihr</p>
+                        <p class="left bold green">seid</p>
+                    </div>
+                    <div>
+                        <p class="right bold black">sie/Sie</p>
+                        <p class="left bold green">sind</p>
+                    </div>
+                </div>
+                <div class="verben-container">
+                    <h3></h3>
+                    <div>
+                        <p class="right bold black">ich</p>
+                        <p class="left bold green"></p>
+                    </div>
+                    <div>
+                        <p class="right bold black">du</p>
+                        <p class="left bold green"></p>
+                    </div>
+                    <div>
+                        <p class="right bold black">er/sie/es</p>
+                        <p class="left bold green"></p>
+                    </div>
+                    <div>
+                        <p class="right bold black">wir</p>
+                        <p class="left bold green"></p>
+                    </div>
+                    <div>
+                        <p class="right bold black">ihr</p>
+                        <p class="left bold green"></p>
+                    </div>
+                    <div>
+                        <p class="right bold black">sie/Sie</p>
+                        <p class="left bold green"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mobile-widgets"><a id="gomenu" href="#menu">Menu</a></div>
+    <footer>VSK1 GmbH 2023 <mark class="grey" id="version">V1.5</mark></footer>
+<script src="../JS/scripts.js"></script>
+<script>
+    const elements = [...document.getElementsByClassName("verben-container")];
+    const container = document.getElementById("conjugations-element-container");
+
+    const searchWord = () => {
+        const search = document.getElementById('searchelement').value;
+        let result = elements;
+        result = result.filter(elements => elements.textContent.includes(search));
+        container.textContent = '';
+        result.forEach(name => container.appendChild(name));
+    }
+
+    document.addEventListener('input', searchWord);
+</script>
+</body>
+</html>

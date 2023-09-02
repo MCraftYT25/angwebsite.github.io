@@ -1,0 +1,23 @@
+#conjugations-element-container {
+    margin-top: 2vh;
+}
+.verben-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    border-bottom: 1px solid lightgray;
+}
+.verben-container div {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5vh;
+
+}
+.verben-container div p {
+    width: 30%;
+
+}
+.verben-container div p.right {
+    margin-right: 1vw;
+    width: 25%;
+}
