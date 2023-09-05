@@ -21,3 +21,19 @@
     margin-right: 1vw;
     width: 25%;
 }
+
+#d-useful-phrases {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+#d-useful-phrases div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 1px lightgray;
+}
+#d-useful-phrases p {
+    padding: 0.5vh;
+}

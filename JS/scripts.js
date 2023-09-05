@@ -1,5 +1,5 @@
-const version = 2.6;
-const versiondate = "2023-09-03";
+const version = 2.7;
+const versiondate = "2023-09-05";
 const year = 2023; 
 
 document.getElementById('version').innerText = "V" + version;
@@ -24,3 +24,5 @@ function chgcolor()
         x = x - 1;
     }      
 }
+
+

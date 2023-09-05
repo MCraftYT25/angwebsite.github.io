@@ -93,6 +93,12 @@ body {
 .right {
     text-align: right;
 }
+.rainbow {
+    font-weight: bold;
+    background: linear-gradient(to bottom, black, red, yellow);
+    /*-webkit-background-clip: text;*/
+    -webkit-text-fill-color: transparent;
+}
 /*--------------------------------------*/
 nav {
     padding: 0.5em;
